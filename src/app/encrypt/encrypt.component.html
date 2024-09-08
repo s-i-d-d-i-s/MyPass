@@ -1,0 +1,18 @@
+<div class="container m-3">
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Seed</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="key">
+      <button class="btn btn-info" (click)="compute()">Generate</button>
+    </div>
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" [(ngModel)]="current_text" style="height: 200px;"></textarea>
+      <label for="floatingTextarea">Text</label>
+    </div>
+    <hr>
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"  [(ngModel)]="generated_hash" disabled="true" style="height: 200px;" ></textarea>
+      <label for="floatingTextarea">Generated Pass</label>
+    </div>
+    <br>
+    <button class="btn btn-info" (click)="save_hash()">Save</button>
+  </div>
